@@ -37,6 +37,7 @@ class UserFactory extends Factory
  */
 
         $gender = $this->faker->randomElement(['male', 'female']);
+        $photo  = $this->faker->image('public/imgs', 140, 140, 'people');
 
         return [
             'fullname'          => $this->faker->firstName($gender),
@@ -45,7 +46,7 @@ class UserFactory extends Factory
             'birthdate'         => $this->faker->dateTimeBetween($startDate = '1960', $endDate = '1990', $timezone = null),
             'gender'            => $gender,
             'address'           => $this->faker->streetAddress,
-            'photo'              =>$this->faker->imageUrl($width = 640, $height = 480),
+            'photo'             => substr($photo, 7),
             'role'              => 'Editor',
             'email_verified_at' => now(),
             'password'          => bcrypt('editor'),
