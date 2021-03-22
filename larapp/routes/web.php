@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
+// use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,3 +56,6 @@ Route::get('/viewusers', function () {
 Route::get('examples', function () {
     return view('examples');
 });
+
+
+Route::get('locale/{locale}', [App\Http\Controllers\LocaleController::class, 'index']);

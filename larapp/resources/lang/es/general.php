@@ -8,5 +8,9 @@ return [
     'login-btn' => 'Ingresar ',
     'login-forgot' => 'Olvidò su Contraseña?',
 
+        //navbar
+    'navbar-loguin' => 'Ingresar',
+    'navbar-register' => 'Registrarse'
+
 
 ];
